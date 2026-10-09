@@ -10,7 +10,7 @@ Los datos se guardan en el navegador (localStorage). Para multiusuario real, el 
 
 ## Desplegar en Vercel
 1. vercel.com → Add New → Project → importa el repo (Framework: Vite, se detecta solo).
-2. Settings → Environment Variables: `ANTHROPIC_API_KEY` (tu clave de console.anthropic.com). Opcional: `ANTHROPIC_MODEL`.
+2. Settings → Environment Variables: `GEMINI_API_KEY` (clave de aistudio.google.com/apikey). Opcional: `GEMINI_MODEL`, `GEMINI_SEARCH`.
 3. Deploy. El Chat IA usa `/api/chat` (la clave nunca llega al navegador).
 
 ## Local

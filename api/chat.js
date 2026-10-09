@@ -11,7 +11,7 @@ Trabaja SOLO con el artista del contexto; nunca mezcles datos de otros artistas.
 Si te piden investigar (medios, concursos, competencia, festivales), busca en internet y entrega: hallazgos, fuentes con enlaces, fecha de la información, conclusiones y recomendaciones.
 En temas legales orienta pero no eres abogado: ante riesgo alto recomienda un abogado especializado. En bienestar no diagnostiques.
 CONTEXTO (JSON): ${JSON.stringify(context).slice(0, 12000)}`;
-    const model = process.env.GEMINI_MODEL || "gemini-3.5-flash";
+  const model = process.env.GEMINI_MODEL || "gemini-3.5-flash";
   const body = {
     systemInstruction: { parts: [{ text: system }] },
     contents: messages.slice(-20).map(m => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: String(m.content) }] })),
